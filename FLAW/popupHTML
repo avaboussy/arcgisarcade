@@ -1,0 +1,55 @@
+<div style="text-align: center;"><b>
+    <font size="4">{WorkTitle}</font>
+  </b></div>
+<div style="text-align: center;">
+  <hr /> <a href="{InWebsite}" rel="nofollow ugc"> <img alt="picture" src="{InWebsite}" style="width: 128px; height: 128px;" /> </a><br />
+  <div></div>
+  <table cellpadding="5px" cellspacing="5px">
+    <tbody>
+      <tr valign="top">
+        <td><br />
+          <font color="#808080">Image Title:</font>
+        </td>
+        <td><br />
+          <div style="text-align: left;">{ImageTitle}</div>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <font color="#808080">Location:</font>
+        </td>
+        <td style="text-align: left;">{InstallationBuilding}{expression/expr1}</td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <font color="#808080">Completed:</font>
+        </td>
+         <td style="text-align: left;">{DateCompleted}</td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <font color="#808080">{expression/expr5}</font>
+        </td>
+        <td style="text-align: left;">{DateOutBuilding}</td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <font color="#808080">Creator(s):</font>
+        </td>
+        <td style="text-align: left;">{Creator1}{expression/expr7}</td>
+      </tr>
+       <tr valign="top">
+        <td>
+          <font color="#808080">{expression/expr6}</font>
+        </td>
+        <td style="text-align: left;">{PatronEnglish}{expression/expr8}</td>
+      </tr>
+        <tr valign="top">
+        <td>
+          <font color="#808080">{expression/expr0}</font>
+        </td>
+        <td style="text-align: left;">{CurrentLocation}</td>
+    </tr></tbody>
+  </table><br />
+  <div style="text-align: center;"><a href="{link_to_website}" rel="nofollow ugc" target="_blank">More Info </a><br /></div>
+</div>
