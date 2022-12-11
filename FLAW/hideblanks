@@ -1,0 +1,5 @@
+<!-- To display Static Text: -->
+IIF(isEmpty($feature.CurrentLocation), "", "Current Location:")
+
+<!-- To display Variable Text -->
+IIF(isEmpty($feature.Creator2), "", (Concatenate ([", ", $feature.Creator2])))
