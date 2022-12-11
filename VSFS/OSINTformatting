@@ -1,3 +1,5 @@
+*** Formatting Text Entries *****
+
 
 var type = IIf(IsEmpty($datapoint.event_subtype),$datapoint.event_type, Concatenate($datapoint.event_type,', ',$datapoint.event_subtype))
 // ^ formats event subtypes 
@@ -29,9 +31,28 @@ return {
 // variables have to be called in the return block in order to be useable in the text editor
 
 
-
-
 // in order to call a variable in the text editor, you have to write it as {expression/variable}
+
+
+****** Formatting Background Color Based on Data*******
+
+var color = when($datapoint.sc__country == 'Russia', '#0055b3',$datapoint.sc__country == 'China', '#E3242B', $datapoint.sc__country == 'AOR', '#999DA0','#222021')
+return {
+  textColor: '#ffffff',
+  backgroundColor: color,
+  separatorColor:'',
+  selectionColor: '',
+  selectionTextColor: '',
+    attributes: {
+      type:type,
+      loc:loc,
+      country2:country2,
+      scactor:scactor,
+      cactor:cactor,
+      color:color
+     }
+}
+
 
 **************************TEXT EDITOR*******************************************
 
