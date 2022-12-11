@@ -1,2 +1,3 @@
 # arcgisarcade
-arcade expressions for arcgis applications, just so I can keep track of what I used where 
+Arcade expressions written for various maps and dashboard displays
+
