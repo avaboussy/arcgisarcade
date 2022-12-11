@@ -1,0 +1,51 @@
+
+var type = IIf(IsEmpty($datapoint.event_subtype),$datapoint.event_type, Concatenate($datapoint.event_type,', ',$datapoint.event_subtype))
+// ^ formats event subtypes 
+var loc = IIf(IsEmpty($datapoint.location_in_country),$datapoint.country_involved, Concatenate($datapoint.country_involved,', ',$datapoint.location_in_country))
+// formats location in country
+var country2 = IIf(IsEmpty($datapoint.country_involved_2),$datapoint.country_involved_2, Concatenate(' (and ',$datapoint.country_involved_2, ')'))
+// formats second country involved
+var scactor = IIf(IsEmpty($datapoint.sc_country_actor),$datapoint.sc_country_actor, Concatenate('  - ',$datapoint.sc__country, ' Actor: ',$datapoint.sc_country_actor))
+// formats sc actors
+var cactor = IIf(IsEmpty($datapoint.country_actor),$datapoint.country_actor, Concatenate('  - ',$datapoint.country_involved, ' Actor: ',$datapoint.country_actor))
+// formats country actors
+
+return {
+  textColor: '#ffffff',
+  backgroundColor: '#474747',
+  separatorColor:'',
+  selectionColor: '',
+  selectionTextColor: '',
+    attributes: {
+      type:type,
+      loc:loc,
+      country2:country2,
+      scactor:scactor,
+      cactor:cactor,
+    
+}
+
+}
+// variables have to be called in the return block in order to be useable in the text editor
+
+
+
+
+// in order to call a variable in the text editor, you have to write it as {expression/variable}
+
+**************************TEXT EDITOR*******************************************
+
+{event_date2}
+{sc__country}: {expression/type}
+{expression/loc}
+{expression/country2}
+{expression/scactor}
+{expression/cactor}
+
+
+
+{event_description}{event_description_2}
+
+
+
+
